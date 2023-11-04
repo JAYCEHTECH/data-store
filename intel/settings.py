@@ -29,8 +29,7 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'www.dataforall.store',
-    'data4all-5d2v7.ondigitalocean.app',
+    'www.datastorgh.com',
     '127.0.0.1'
 ]
 
