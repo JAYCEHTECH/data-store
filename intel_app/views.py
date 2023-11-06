@@ -409,7 +409,7 @@ def credit_user(request):
                 }
 
                 sms_url = 'https://webapp.usmsgh.com/api/sms/send'
-                sms_message = f"Hello {user_needed},\nYour DataForAll wallet has been credit with GHS{amount}.\nDataForAll."
+                sms_message = f"Hello {user_needed},\nYour DataStore wallet has been credit with GHS{amount}.\nDataForAll."
 
                 sms_body = {
                     'recipient': f"233{user_needed.phone}",
