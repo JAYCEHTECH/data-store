@@ -23,6 +23,8 @@ urlpatterns = [
     path('mtn_pay_with_wallet/', views.mtn_pay_with_wallet, name='mtn_pay_with_wallet'),
     path('topup-info', views.topup_info, name='topup-info'),
     path("request_successful/<str:reference>", views.request_successful, name='request_successful'),
+    path('elevated/topup-list', views.topup_list, name="topup_list"),
+    path('credit/<str:reference>', views.credit_user_from_list, name='credit'),
 
     path('login', authViews.login_page, name='login'),
     path('signup', authViews.sign_up, name='signup'),
