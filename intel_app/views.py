@@ -450,7 +450,7 @@ def topup_info(request):
         sms_message = f"A top up request has been placed.\nGHS{amount} for {user}.\nReference: {reference}"
 
         sms_body = {
-            'recipient': "233274319883",
+            'recipient': f"233{admin}",
             'sender_id': 'DATASTOREGH',
             'message': sms_message
         }
