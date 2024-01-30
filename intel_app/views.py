@@ -305,8 +305,8 @@ def mtn(request):
             'sender_id': 'DATASTOREGH',
             'message': sms_message
         }
-        response = requests.request('POST', url=sms_url, params=sms_body, headers=sms_headers)
-        print(response.text)
+        # response = requests.request('POST', url=sms_url, params=sms_body, headers=sms_headers)
+        # print(response.text)
         return JsonResponse({'status': "Your transaction will be completed shortly", 'icon': 'success'})
     user = models.CustomUser.objects.get(id=request.user.id)
     context = {'form': form, "ref": reference, "email": user_email, "wallet": 0 if user.wallet is None else user.wallet}
@@ -375,7 +375,7 @@ def mark_as_sent(request, pk):
         sms_message = f"Your account has been credited with {txn.offer}.\nTransaction Reference: {txn.reference}"
 
         sms_body = {
-            'recipient': f"233{txn.bundle_number}",
+            'recipient': f"233{txn.user.phone}",
             'sender_id': 'DATASTOREGH',
             'message': sms_message
         }
